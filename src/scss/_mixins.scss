@@ -1,0 +1,59 @@
+@mixin title {
+  height: 16.5px;
+  margin-bottom: -6.5px;
+  text-transform: uppercase;
+  font-family: "Arial MT Bold";
+  font-size: 14px;
+  font-weight: bold;
+  color: #444444;
+}
+
+@mixin text {
+  width: 231px;
+  height: 34.9px;
+  font-family: "Arial MT";
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #666666;
+}
+
+@mixin ribbon {
+  font-size: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); /* Needed for Safari */
+  width: 100px;
+  display: block;
+  background: #ff9000;
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  padding-left: 14px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #d97e00;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d97e00;
+  };
+  &::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #d97e00;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #d97e00;
+  }
+}

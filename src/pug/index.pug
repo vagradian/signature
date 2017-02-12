@@ -1,0 +1,80 @@
+include _mixins.pug
+
+doctype
+html
+    head
+        title
+        meta(charset="utf-8")
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet" href="css/fonts.css")
+        script(src="js/script.js")
+        script(src="js/viewport.js")
+    body
+        div.wrapper
+            div.signature
+                header.header
+                    div.header__icon
+                    h3.header__title Create Your Signature / Initials
+                    h3.header__title--mobile Create Your Signature
+                    a.header__close(href="#")
+                        div.close__icon &#10005;
+                div.login
+                    div.ribbon #[span Easy]
+                    div.login__content
+                        div.content__icon
+                            +use("type")
+                            h2.content__title Type
+                        div.content__description
+                            p.content__text Easy way to create your signature or initials #[strong type] your name or #[strong select an option] from the bottom to create your signature or initials.
+                            form.content__form(method="post", action="/user")
+                                input(type="text", name="", value="John Smith")
+                            a.content__link(href="#")
+                                button.content__button(type="button") Sign
+                        div.content__signature
+                            p.content__example John Smith
+                div.features
+                    div.features__element.features__element--mobile
+                        +use("type")
+                        div.features__info
+                            div.ribbon.ribbon--fast #[span Easy]
+                            a.features__link(href="#")
+                                h2.features__title Type
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                        +use("draw")
+                        div.features__info
+                            a.features__link(href="#")
+                                h2.features__title Draw
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                         +use("upload")
+                         div.features__info
+                             a.features__link(href="#")
+                                h2.features__title Upload
+                             p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                        +use("camera")
+                        div.features__info
+                            a.features__link(href="#")
+                                h2.features__title Use camera
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                        +use("qr-mobile")
+                        div.features__info
+                            div.ribbon.ribbon--fast #[span Fast]
+                            a.features__link(href="#")
+                                h2.features__title Via qr code
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                        +use("sms-mobile")
+                        div.features__info
+                            a.features__link(href="#")
+                                h2.features__title Use mobile via sms
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    div.features__element
+                        +use("email-mobile")
+                        div.features__info
+                            a.features__link(href="#")
+                                h2.features__title Use mobile via email
+                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.

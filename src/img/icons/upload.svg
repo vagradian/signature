@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="42px" viewBox="0 0 44 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>8E05BB07-0F9F-464A-AC31-3743C3CF9929</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M33,34 L9.34908333,34 C4.19375,34 0,29.6488236 0,24.2974527 C0,20.375066 2.25683333,16.8833579 5.68975,15.3759827 C5.64391667,14.9349149 5.62191667,14.5061252 5.62191667,14.0801689 C5.62191667,6.31567544 11.7085833,0 19.1895,0 C24.7069167,0 29.6651667,3.48981916 31.7405,8.75807661 C31.7735,8.75713214 31.8055833,8.75713214 31.8376667,8.75713214 C38.544,8.75713214 44,14.4192339 44,21.3790383 C44,27.6512681 40.2215,34 33,34 L33,34 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="44" height="34" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="signature" transform="translate(-500.000000, -343.000000)">
+            <g id="Group-2-Copy-2" transform="translate(100.000000, 111.000000)">
+                <g id="Group-17" transform="translate(30.000000, 80.000000)">
+                    <g id="Group-9" transform="translate(350.000000, 128.000000)">
+                        <g id="upload" transform="translate(20.000000, 24.000000)">
+                            <use id="Shape" stroke="#444444" mask="url(#mask-2)" stroke-width="4" fill="#E1F5FE" xlink:href="#path-1"></use>
+                            <rect id="Rectangle-151" fill="#E1F5FE" x="15" y="32" width="14" height="2"></rect>
+                            <path d="M21,21.4141981 L16.7071657,25.7077479 C16.3166739,26.0983047 15.683509,26.0983574 15.2929521,25.7078657 C14.9023953,25.3173739 14.9023426,24.684209 15.2928343,24.2936521 L21.2928343,18.2926521 C21.6833721,17.9020493 22.3166279,17.9020493 22.7071657,18.2926521 L28.7071657,24.2936521 C29.0976574,24.684209 29.0976047,25.3173739 28.7070479,25.7078657 C28.316491,26.0983574 27.6833261,26.0983047 27.2928343,25.7077479 L23,21.4141981 L23,41 C23,41.5522847 22.5522847,42 22,42 C21.4477153,42 21,41.5522847 21,41 L21,21.4141981 L21,21.4141981 Z" id="Combined-Shape" fill="#444444"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

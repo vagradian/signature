@@ -1,0 +1,295 @@
+@import "variables";
+@import "mixins";
+
+body {
+  background-color: $bg-color;
+}
+
+.signature {
+  margin: 5% auto;
+  width: 750px;
+  height: 580px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 13px 0 $gray;
+  font-family: "Arial MT";
+}
+
+.header {
+  width: 750px;
+  height: 60px;
+  border-radius: 3px;
+  background-color: #fdfdfd;
+  box-shadow: 0 1px 0 0 #dddddd;
+}
+
+.header__icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 14px 20px;
+  background-image: url("../img/gallery-signature.svg");
+  float: left;
+}
+
+.header__title {
+  position: relative;
+  top: 19px;
+  height: 23px;
+  font-family: "Arial MT";
+  font-size: 20px;
+  font-weight: normal;
+  color: #343434;
+}
+
+.header__title--mobile {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.close__icon {
+  position: relative;
+  bottom: 21px;
+  right: 20px;
+  float: right;
+  color: #666666;
+}
+
+.login {
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px 30px;
+  width: 690px;
+  height: 118px;
+  border-radius: 3px;
+  background-color: $white;
+  border: solid 1px #cccccc;
+}
+
+.ribbon {
+  position: absolute;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  text-align: right;
+  overflow: hidden;
+  top: -5px;
+  left: -5px;
+}
+
+.ribbon span {
+  @include ribbon;
+}
+
+.ribbon--fast {
+  top: -18px;
+  left: -93px;
+}
+
+.login__content {
+  display: flex;
+  margin: 5px 20px 10px 0;
+  justify-content: space-between;
+}
+
+.content__title {
+ @include title;
+  position: relative;
+  bottom: 20px;
+  left: 27px;
+}
+
+.content__description {
+  width: 400px;
+  margin-right: 10px;
+}
+
+.content__text {
+  font-size: 13px;
+  line-height: 1.38;
+  color: #666666;
+  strong {
+    font-family: "Arial MT Bold";
+  }
+}
+
+.content__signature {
+  position: relative;
+  top: 18px;
+  width: 173px;
+  height: 71px;
+  border-radius: 1.5px;
+  background-color: #fcfcfc;
+  border: solid 1px #cccccc;
+}
+
+.content__example {
+  position: relative;
+  bottom: 12px;
+  left: 12px;
+  font-family: "HanziPenSC W3";
+  font-size: 30px;
+  color: $gray;
+}
+
+.content__form {
+  float: left;
+  position: relative;
+  bottom: 5px;
+  input {
+    box-sizing: border-box;
+    width: 264px;
+    height: 32px;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #cccccc;
+  }
+  input[type="text"] {
+    padding-left: 10px;
+  }
+  input[value] {
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.content__button {
+  box-sizing: border-box;
+  position: relative;
+  bottom: 5px;
+  left: 7px;
+  width: 100px;
+  height: 32px;
+  border-radius: 3px;
+  background-image:
+          linear-gradient(to bottom, #ffbc58, #ff830a);
+  border: solid 1px #fd7722;
+  font-size: 12px;
+  font-weight: bold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.features {
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.features__element {
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 340px;
+  height: 90px;
+  border-radius: 3px;
+  background-color: $white;
+  border: solid 1px #cccccc;
+}
+
+.features__element--mobile {
+  display: none;
+}
+
+.features__icon {
+  display: block;
+  position: relative;
+  bottom: 4px;
+  margin: 23px;
+}
+
+svg {
+  display: none;
+}
+
+.features__info {
+  position: relative;
+  bottom: 74px;
+  left: 87px;
+  .features__title {
+    @include title;
+  }
+  .features__text {
+    @include text;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: $white;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    width: auto;
+    margin: -8px;
+    overflow-x: hidden;
+  }
+
+  .signature {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    box-shadow: none;
+  }
+
+  .header {
+    width: auto;
+    height: 44px;
+    margin: -10px;
+  }
+
+  .header__icon {
+    display: none;
+  }
+
+  .header__title {
+    display: none;
+  }
+
+  .header__title--mobile {
+    display: block;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #343434;
+  }
+
+  .close__icon {
+    bottom: 47px;
+    right: 30px;
+    opacity: 0.54;
+    color: #424242;
+  }
+
+  .login {
+    display: none;
+  }
+
+  .features {
+    margin: 16px auto;
+    flex-direction: column;
+  }
+
+  .features__element {
+    height: 104px;
+    margin: 10px auto;
+    padding: 7px;
+  }
+
+  .features__element--mobile {
+    display: block;
+  }
+
+  .ribbon {
+    top: -25px;
+    left: -96px;
+  }
+}
