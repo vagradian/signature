@@ -195,6 +195,10 @@ a {
   display: none;
 }
 
+svg {
+  display: none;
+}
+
 .features__icon {
   display: block;
   position: relative;
@@ -202,8 +206,9 @@ a {
   margin: 23px;
 }
 
-svg {
-  display: none;
+// for firefox
+#type, #draw, #camera, #email-mobile, #qr-mobile, #sms-mobile, #upload {
+  display: block;
 }
 
 .features__info {

@@ -35,6 +35,7 @@ gulp.task("style", function () {
         .pipe(gulp.dest("src/css"))
 });
 
+
 // pug task
 gulp.task("pug", function () {
     return gulp.src("src/pug/index.pug")
@@ -43,6 +44,7 @@ gulp.task("pug", function () {
         }))
         .pipe(gulp.dest("src/"))
 });
+
 
 // browser-sync tasks
 gulp.task("browser-sync", function() {
@@ -53,6 +55,7 @@ gulp.task("browser-sync", function() {
         notify: false
     });
 });
+
 
 
 gulp.task("build:serve", function() {
@@ -84,20 +87,14 @@ gulp.task("build:copy", ["build:clean"] , function() {
 // list all files and directories here that you don't want to include
 gulp.task("build:remove", ["build:copy"], function() {
     del([
-        "build/scss/"
+        "build/scss/",
+        "build/pug"
     ]);
 });
 
 
-// task to minify all images
-gulp.task("build:images", ["build:remove"], function() {
-    return gulp.src("build/img/*.png")
-        .pipe(imagemin({ progressive: true}))
-        .pipe(gulp.dest("build/img"));
-});
-
 // task to store and minify SVG
-gulp.task("icons", function() {
+gulp.task("build:sprite", ["build:remove"], function() {
     return gulp.src("src/img/icons/*.svg")
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -119,7 +116,7 @@ gulp.task("icons", function() {
 
 
 // task to build
-gulp.task("build", ["build:copy", "build:images"]);
+gulp.task("build", ["build:copy", "build:sprite"]);
 
 
 // task to watch on all changes

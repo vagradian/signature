@@ -210,14 +210,17 @@ a {
 .features__element--mobile {
   display: none; }
 
+svg {
+  display: none; }
+
 .features__icon {
   display: block;
   position: relative;
   bottom: 4px;
   margin: 23px; }
 
-svg {
-  display: none; }
+#type, #draw, #camera, #email-mobile, #qr-mobile, #sms-mobile, #upload {
+  display: block; }
 
 .features__info {
   position: relative;
