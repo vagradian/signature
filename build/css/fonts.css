@@ -1,0 +1,27 @@
+@font-face {font-family: "Arial MT";
+    src: url("../fonts/Arial%20MT/Arial%20MT.eot"); /* IE9*/
+    src: url("../fonts/Arial%20MT/Arial%20MT.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Arial%20MT/Arial%20MT.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Arial%20MT/Arial%20MT.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Arial%20MT/Arial%20MT.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Arial%20MT/Arial%20MT.svg#Arial MT") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "Arial MT Bold";
+    src: url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.eot"); /* IE9*/
+    src: url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/Arial%20MT%20Bold/Arial%20MT%20Bold.svg#Arial MT Bold") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "HanziPenSC W3";
+    src: url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.eot"); /* IE9*/
+    src: url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.woff2") format("woff2"), /* chrome、firefox */
+    url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.woff") format("woff"), /* chrome、firefox */
+    url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../fonts/HanziPenSC%20W3/HanziPenSC%20W3.svg#HanziPenSC W3") format("svg"); /* iOS 4.1- */
+}
+

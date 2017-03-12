@@ -10,100 +10,95 @@
     <script src="js/viewport.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="signature">
-        <header class="header">
-          <div class="header__icon"></div>
-          <h3 class="header__title">Create Your Signature / Initials</h3>
-          <h3 class="header__title--mobile">Create Your Signature</h3><a class="header__close" href="#">
-            <div class="close__icon">&#10005;</div></a>
-        </header>
-        <div class="login">
-          <div class="ribbon"><span>Easy</span></div>
-          <div class="login__content">
-            <div class="content__icon">
-              <svg class="features__icon" width="44" height="44">
-                <use xlink:href="#type"></use>
-              </svg>
-              <h2 class="content__title">Type</h2>
-            </div>
-            <div class="content__description">
-              <p class="content__text">Easy way to create your signature or initials <strong>type</strong> your name or <strong>select an option</strong> from the bottom to create your signature or initials.</p>
-              <form class="content__form" method="post" action="/user">
-                <input type="text" name="" value="John Smith">
-              </form><a class="content__link" href="#">
-                <button class="content__button" type="button">Sign</button></a>
-            </div>
-            <div class="content__signature">
-              <p class="content__example">John Smith</p>
-            </div>
-          </div>
-        </div>
-        <div class="features">
-          <div class="features__element features__element--mobile">
-            <svg class="features__icon" width="44" height="44">
+    <div class="signature-manager">
+      <header class="signature-header">
+        <div class="signature-header__icon"></div>
+        <div class="signature-header__title">Create Your Signature / Initials</div>
+        <div class="signature-header__title--mobile">Create Your Signature</div>
+        <div class="signature-header__close-icon"></div>
+      </header>
+      <div class="signature-type">
+        <div class="signature-type-inner">
+          <div class="signature-type__icon">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#type"></use>
             </svg>
-            <div class="features__info">
-              <div class="ribbon ribbon--fast"><span>Easy</span></div><a class="features__link" href="#">
-                <h2 class="features__title">Type</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="signature-type__title">Type</div>
+          </div>
+          <div class="signature-type__content">
+            <div class="signature-type__description">Easy way to create your signature or initials <span>type</span> your name or <span>select an option</span> from the bottom to create your signature or initials.</div>
+            <div class="signature-type__form">
+              <div class="signature-input">John Smith</div>
+              <button class="signature-button" type="button">Sign</button>
             </div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+          <div class="signature-type-example">
+            <div class="signature-type-example__name">John Smith</div>
+          </div>
+        </div>
+      </div>
+      <div class="signature-options">
+        <div class="signature-options__element signature-options__element--mobile"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
+              <use xlink:href="#type"></use>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Type</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+          </div>
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#draw"></use>
-            </svg>
-            <div class="features__info"><a class="features__link" href="#">
-                <h2 class="features__title">Draw</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Draw</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#upload"></use>
-            </svg>
-            <div class="features__info"><a class="features__link" href="#">
-                <h2 class="features__title">Upload</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Upload</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#camera"></use>
-            </svg>
-            <div class="features__info"><a class="features__link" href="#">
-                <h2 class="features__title">Use camera</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Use camera</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#qr-mobile"></use>
-            </svg>
-            <div class="features__info">
-              <div class="ribbon ribbon--fast"><span>Fast</span></div><a class="features__link" href="#">
-                <h2 class="features__title">Via qr code</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Via qr code</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#sms-mobile"></use>
-            </svg>
-            <div class="features__info"><a class="features__link" href="#">
-                <h2 class="features__title">Use mobile via sms</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Use mobile via sms</div>
+            <div class="signature-options__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
-          <div class="features__element">
-            <svg class="features__icon" width="44" height="44">
+        </div>
+        <div class="signature-options__element"><a class="signature-options__link" href="#">
+            <svg class="signature-options__icon" width="44" height="44">
               <use xlink:href="#email-mobile"></use>
-            </svg>
-            <div class="features__info"><a class="features__link" href="#">
-                <h2 class="features__title">Use mobile via email</h2></a>
-              <p class="features__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
+            </svg></a>
+          <div class="signature-options__description">
+            <div class="signature-options__title">Use mobile via email</div>
+            <div class="signature-options__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
           </div>
         </div>
       </div>

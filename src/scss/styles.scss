@@ -1,300 +1,193 @@
 @import "variables";
 @import "mixins";
 
-body {
+.signature-manager {
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  border-radius: 3px;
   background-color: $bg-color;
-}
-
-.signature {
-  margin: 5% auto;
-  width: 750px;
-  height: 580px;
-  border-radius: 3px;
-  background-color: #f8f8f8;
   box-shadow: 0 2px 13px 0 $gray;
+  font-size: 13px;
   font-family: "Arial MT";
+  color: $gray;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 20px;
+  }
 }
 
-.header {
-  width: 750px;
-  height: 60px;
+.signature-header {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  padding: 20px;
   border-radius: 3px;
-  background-color: #fdfdfd;
+  background-color: $header-bg-color;
   box-shadow: 0 1px 0 0 #dddddd;
 }
 
-.header__icon {
-  position: relative;
+.signature-header__title, .signature-header__title--mobile {
+  display: flex;
+  flex: 1 0 auto;
+  font-size: 20px;
+  color: $asphalt;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.signature-header__title--mobile {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.signature-header__icon {
   width: 32px;
   height: 32px;
-  margin: 14px 20px;
-  background-image: url("../img/gallery-signature.svg");
-  float: left;
+  margin-right: 12px;
+  background: url("../img/gallery-signature.svg");
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
-.header__title {
-  position: relative;
-  top: 19px;
-  height: 23px;
-  font-family: "Arial MT";
-  font-size: 20px;
-  font-weight: normal;
-  color: #343434;
+.signature-header__close-icon {
+  width: 17px;
+  height: 17px;
+  background: url("../img/close.svg") no-repeat;
+
+  @media screen and (max-width: 768px) {
+    color: $light-gray;
+  }
 }
 
-.header__title--mobile {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.close__icon {
-  position: relative;
-  bottom: 21px;
-  right: 20px;
-  float: right;
-  color: #666666;
-}
-
-.login {
-  box-sizing: border-box;
-  position: relative;
-  margin: 20px 30px;
-  width: 690px;
-  height: 118px;
-  border-radius: 3px;
+.signature-type {
+  margin: 20px 30px 5px 30px;
   background-color: $white;
   border: solid 1px #cccccc;
+  border-radius: 3px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
-.ribbon {
-  position: absolute;
-  z-index: 1;
-  width: 54px;
-  height: 54px;
-  text-align: right;
-  overflow: hidden;
-  top: -5px;
-  left: -5px;
-}
-
-.ribbon span {
-  @include ribbon;
-}
-
-.ribbon--fast {
-  top: -18px;
-  left: -93px;
-}
-
-.login__content {
+.signature-type-inner {
   display: flex;
-  margin: 5px 20px 10px 0;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-.content__title {
- @include title;
-  position: relative;
-  bottom: 20px;
-  left: 27px;
+.signature-type__content {
+  margin: 0 20px;
 }
 
-.content__description {
-  width: 400px;
-  margin-right: 10px;
+.signature-type__title, .signature-options__title {
+  margin-top: 6px;
+  font-size: 14px;
+  font-family: "Arial MT Bold";
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.content__text {
-  font-size: 13px;
-  line-height: 1.38;
-  color: #666666;
-  strong {
+.signature-type__description {
+  margin-bottom: 10px;
+
+  span {
     font-family: "Arial MT Bold";
   }
 }
 
-.content__signature {
-  position: relative;
-  top: 18px;
-  width: 173px;
-  height: 71px;
-  border-radius: 1.5px;
-  background-color: #fcfcfc;
+.signature-type__form {
+  display: flex;
+}
+
+.signature-input {
+  padding: 10px 8px;
+  margin-right: 7px;
+  width: 100%;
   border: solid 1px #cccccc;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  font-size: 14px;
 }
 
-.content__example {
-  position: relative;
-  bottom: 12px;
-  left: 12px;
-  font-family: "HanziPenSC W3";
-  font-size: 30px;
-  color: $gray;
-}
-
-.content__form {
-  float: left;
-  position: relative;
-  bottom: 5px;
-  input {
-    box-sizing: border-box;
-    width: 264px;
-    height: 32px;
-    border-radius: 3px;
-    background-color: $white;
-    box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
-    border: solid 1px #cccccc;
-  }
-  input[type="text"] {
-    padding-left: 10px;
-  }
-  input[value] {
-    font-size: 14px;
-    color: $gray;
-  }
-}
-
-.content__button {
-  box-sizing: border-box;
-  position: relative;
-  bottom: 5px;
-  left: 7px;
-  width: 100px;
-  height: 32px;
+.signature-button {
+  padding: 8px 35px;
   border-radius: 3px;
   background-image:
           linear-gradient(to bottom, #ffbc58, #ff830a);
   border: solid 1px #fd7722;
   font-size: 12px;
-  font-weight: bold;
+  font-family: "Arial MT Bold";
   color: $white;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.features {
-  margin: 0 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: wrap;
-}
-
-.features__element {
-  box-sizing: border-box;
-  margin-top: 10px;
-  width: 340px;
-  height: 90px;
-  border-radius: 3px;
-  background-color: $white;
+.signature-type-example {
+  padding: 20px 15px;
+  background-color: #fcfcfc;
   border: solid 1px #cccccc;
 }
 
-.features__element--mobile {
+.signature-type-example__name {
+  text-align: center;
+  font-size: 30px;
+  white-space: nowrap;
+  font-family: "HanziPenSC W3";
+}
+
+.signature-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 25px;
+}
+
+.signature-options__element.signature-options__element--mobile {
   display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex: 1 0 auto;
+  }
+}
+
+.signature-options__element {
+  flex: 1 0 auto;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: $white;
+  border: solid 1px #cccccc;
 }
 
 svg {
   display: none;
 }
 
-.features__icon {
-  display: block;
-  position: relative;
-  bottom: 4px;
-  margin: 23px;
+.signature-options__icon {
+  display: flex;
 }
 
-// for firefox
-#type, #draw, #camera, #email-mobile, #qr-mobile, #sms-mobile, #upload {
-  display: block;
+.signature-options__link {
+  margin-right: 20px;
+  float: left;
 }
 
-.features__info {
-  position: relative;
-  bottom: 74px;
-  left: 87px;
-  .features__title {
-    @include title;
-  }
-  .features__text {
-    @include text;
-  }
+.signature-options__description {
+
 }
 
-@media (max-width: 768px) {
-  body {
-    background-color: $white;
-    overflow-x: hidden;
-  }
-
-  .wrapper {
-    width: auto;
-    margin: -8px;
-    overflow-x: hidden;
-  }
-
-  .signature {
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-color: $white;
-    box-shadow: none;
-  }
-
-  .header {
-    width: auto;
-    height: 44px;
-    margin: -10px;
-  }
-
-  .header__icon {
-    display: none;
-  }
-
-  .header__title {
-    display: none;
-  }
-
-  .header__title--mobile {
-    display: block;
-    padding: 12px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
-    color: #343434;
-  }
-
-  .close__icon {
-    bottom: 47px;
-    right: 30px;
-    opacity: 0.54;
-    color: #424242;
-  }
-
-  .login {
-    display: none;
-  }
-
-  .features {
-    margin: 16px auto;
-    flex-direction: column;
-  }
-
-  .features__element {
-    height: 104px;
-    margin: 10px auto;
-    padding: 7px;
-  }
-
-  .features__element--mobile {
-    display: block;
-  }
-
-  .ribbon {
-    top: -25px;
-    left: -96px;
-  }
+.signature-options__title {
+  text-align: left;
 }

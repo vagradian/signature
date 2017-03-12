@@ -1,0 +1,8 @@
+svg {
+  display: none; }
+
+.features__icon {
+  display: block; }
+
+.header__icon {
+  background: url("../img/gallery-signature.svg"); }

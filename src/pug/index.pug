@@ -11,70 +11,64 @@ html
         script(src="js/script.js")
         script(src="js/viewport.js")
     body
-        div.wrapper
-            div.signature
-                header.header
-                    div.header__icon
-                    h3.header__title Create Your Signature / Initials
-                    h3.header__title--mobile Create Your Signature
-                    a.header__close(href="#")
-                        div.close__icon &#10005;
-                div.login
-                    div.ribbon #[span Easy]
-                    div.login__content
-                        div.content__icon
-                            +use("type")
-                            h2.content__title Type
-                        div.content__description
-                            p.content__text Easy way to create your signature or initials #[strong type] your name or #[strong select an option] from the bottom to create your signature or initials.
-                            form.content__form(method="post", action="/user")
-                                input(type="text", name="", value="John Smith")
-                            a.content__link(href="#")
-                                button.content__button(type="button") Sign
-                        div.content__signature
-                            p.content__example John Smith
-                div.features
-                    div.features__element.features__element--mobile
+        .signature-manager
+            header.signature-header
+                .signature-header__icon
+                .signature-header__title Create Your Signature / Initials
+                .signature-header__title--mobile Create Your Signature
+                .signature-header__close-icon
+            .signature-type
+                .signature-type-inner
+                    .signature-type__icon
                         +use("type")
-                        div.features__info
-                            div.ribbon.ribbon--fast #[span Easy]
-                            a.features__link(href="#")
-                                h2.features__title Type
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
+                        .signature-type__title Type
+                    .signature-type__content
+                        .signature-type__description Easy way to create your signature or initials #[span type] your name or #[span select an option] from the bottom to create your signature or initials.
+                        .signature-type__form
+                            .signature-input John Smith
+                            button.signature-button(type="button") Sign
+                    .signature-type-example
+                        .signature-type-example__name John Smith
+            .signature-options
+                .signature-options__element.signature-options__element--mobile
+                    a.signature-options__link(href="#")
+                        +use("type")
+                    .signature-options__description
+                        .signature-options__title Type
+                        .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
                         +use("draw")
-                        div.features__info
-                            a.features__link(href="#")
-                                h2.features__title Draw
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
-                         +use("upload")
-                         div.features__info
-                             a.features__link(href="#")
-                                h2.features__title Upload
-                             p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
+                    .signature-options__description
+                        .signature-options__title Draw
+                        .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
+                        +use("upload")
+                    .signature-options__description
+                        .signature-options__title Upload
+                        .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
                         +use("camera")
-                        div.features__info
-                            a.features__link(href="#")
-                                h2.features__title Use camera
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
+                    .signature-options__description
+                            .signature-options__title Use camera
+                            .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
                         +use("qr-mobile")
-                        div.features__info
-                            div.ribbon.ribbon--fast #[span Fast]
-                            a.features__link(href="#")
-                                h2.features__title Via qr code
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
+                    .signature-options__description
+                        .signature-options__title Via qr code
+                        .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
                         +use("sms-mobile")
-                        div.features__info
-                            a.features__link(href="#")
-                                h2.features__title Use mobile via sms
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    div.features__element
+                    .signature-options__description
+                        .signature-options__title Use mobile via sms
+                        .signature-options__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                .signature-options__element
+                    a.signature-options__link(href="#")
                         +use("email-mobile")
-                        div.features__info
-                            a.features__link(href="#")
-                                h2.features__title Use mobile via email
-                            p.features__text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    .signature-options__description
+                        .signature-options__title Use mobile via email
+                        .signature-options__description Lorem Ipsum is simply dummy text of the printing and typesetting industry.
