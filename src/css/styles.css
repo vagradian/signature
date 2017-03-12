@@ -147,6 +147,9 @@ svg {
   .signature-manager {
     padding-bottom: 20px; }
 
+  .signature-header {
+    margin-bottom: 10px; }
+
   .signature-header__title, .signature-header__title--mobile {
     display: none; }
 
@@ -165,7 +168,6 @@ svg {
     display: none; }
 
   .signature-options__element.signature-options__element--mobile {
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; } }
